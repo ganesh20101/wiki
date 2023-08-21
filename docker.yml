@@ -25,6 +25,17 @@
     - name: exec1
       ansible.builtin.command:
         cmd: docker exec -it prakash
+    - name: copy to containner
+      ansible.builtin.copy:
+        src: /var/lib/jenkins/workspace/newproject/
+        dest: /home/ec2-user
+    - name: copy target
+        shell: docker cp /home/ec2-user/prakash:/var/lib/docker/
+
+
+
+
+
 
 
     
