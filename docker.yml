@@ -4,7 +4,7 @@
   tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
-        src: /var/lib/jenkins/workspace/newproject/target
+        src: /var/lib/jenkins/workspace/my project/Dockerfile
         dest: /home/ec2-user
         mode: '0644'
 
@@ -22,10 +22,10 @@
       ansible.builtin.command:
         cmd: docker run -itd --name prakash -p 8083:8080 sarathii
 
-
-    - name: remove file
+    - name: exec1
       ansible.builtin.command:
-        cmd: rm -f /home/ec2-user/Dockerfile
+        cmd: docker exec -it prakash
+
 
     
 
