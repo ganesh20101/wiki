@@ -15,7 +15,7 @@
       command: docker exec -it prakash chmod +x /home/jenkins.sh
 
     - name: run script
-      shell: docker exec prakash /home/jenkins.sh
+      shell: docker exec -it prakash bash -c ". /home/jenkins.sh"
 
 
 
