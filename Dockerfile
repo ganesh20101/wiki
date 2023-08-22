@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y openjdk-11-jdk wget gnupg2 && \
 EXPOSE 8080
 
 # Start Jenkins
-CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
+# CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
