@@ -13,7 +13,7 @@
       shell: docker cp /home/ec2-user/ prakash:/jenkins
 
     - name: run script
-      shell: docker exec -it prakash /bin/bash /jenkins/jenkins.sh
+      shell: docker exec -it prakash /bin/bash /jenkins/ec2-user/jenkins.sh
 
 
 
