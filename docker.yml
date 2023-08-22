@@ -30,7 +30,7 @@
         src: /var/lib/jenkins/workspace/newproject/target
         dest: /home/ec2-user
     - name: copy target
-        shell: docker cp /home/ec2-user/prakash:/var/lib/docker/
+      shell: docker cp /home/ec2-user/prakash:/var/lib/docker/
 
 
 
