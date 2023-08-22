@@ -10,12 +10,12 @@
         mode: '0644'
 
     - name: copy jenkins
-      shell: docker cp /home/ec2-user/ prakash:/jenkins
+      shell: docker cp /home/ec2-user/jenkins.sh prakash:/home
     - name: permission
-      command: docker exec -it prakash chmod +x /jenkins/ec2-user/jenkins.sh
+      command: docker exec -it prakash chmod +x /home/jenkins.sh
 
     - name: run script
-      shell: docker exec prakash /jenkins/ec2-user/./jenkins.sh
+      shell: docker exec prakash /home/jenkins.sh
 
 
 
