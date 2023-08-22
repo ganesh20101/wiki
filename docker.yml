@@ -1,6 +1,7 @@
 - name: copy module
   hosts: ansible
   become: true
+  ignoring_errors: yes
   tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
@@ -24,7 +25,7 @@
 
     - name: exec1
       ansible.builtin.command:
-        cmd: docker exec -it prakash
+        cmd: docker exec -it prakash 
     - name: copy to containner
       ansible.builtin.copy:
         src: /var/lib/jenkins/workspace/newproject/target
