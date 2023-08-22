@@ -1,7 +1,7 @@
 - name: copy module
   hosts: ansible
   become: true
-  ignoring_errors: yes
+  ignore_errors: yes
   tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
