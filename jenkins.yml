@@ -1,0 +1,23 @@
+- name: copy module
+  hosts: ansible
+  become: true
+  ignore_errors: yes
+  tasks:
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+        src: /bin/
+        dest: /home/ec2-user
+        mode: '0644'
+
+    - name: copy jenkins
+      shell: docker cp /home/ec2-user/ prakash:/var/lib/
+
+
+
+
+
+
+
+    
+
+    
