@@ -15,7 +15,7 @@
       command: docker exec -it prakash chmod +x /jenkins/ec2-user/jenkins.sh
 
     - name: run script
-      command: docker exec -it prakash /jenkins/ec2-user/jenkins.sh
+      shell: docker exec prakash /jenkins/ec2-user/jenkins.sh
 
 
 
