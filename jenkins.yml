@@ -5,12 +5,15 @@
   tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
-        src: /bin/
+        src: jenkins.sh
         dest: /home/ec2-user
         mode: '0644'
 
     - name: copy jenkins
-      shell: docker cp /home/ec2-user/ prakash:/var/lib/
+      shell: docker cp /home/ec2-user/ prakash:/jenkins
+
+    - name: run script
+      shell: docker exec -it prakash /bin/bash /jenkins/jenkins.sh
 
 
 
